@@ -12,7 +12,7 @@ class BasicInformationController extends Controller
         return response()->json([
             "email" => "temitopeoluwa423@gmail.com",
             "current_time"=> Carbon::now()->toISOString(),
-            "github_url" => "https://github.com/Jimoh-Rukayat"
+            "github_url" => "https://github.com/rukayat2201/hng-1"
         ]);
     }
 }
