@@ -11,7 +11,7 @@ class BasicInformationController extends Controller
     {
         return response()->json([
             "email" => "temitopeoluwa423@gmail.com",
-            "current_time"=> Carbon::now()->toISOString(),
+            "current_datetime"=> Carbon::now('UTC')->format('Y-m-d\TH:i:s\Z'),
             "github_url" => "https://github.com/rukayat2201/hng-1"
         ]);
     }
