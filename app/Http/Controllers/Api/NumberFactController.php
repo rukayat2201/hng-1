@@ -44,7 +44,15 @@ class NumberFactController extends Controller
 
    public function numberFact($num)
    {
+            if (!is_numeric($num)) {
+                return response()->json([
+                    'number' => 'alphabet',
+                    'error' => true,
+                ], 400);
+            }
         try {
+            $num = (int) $num; 
+            
             $prime = $this->isPrime($num);
             $perfect = $this->isPerfect($num);
             $armstrong = $this->isArmstrong($num);
